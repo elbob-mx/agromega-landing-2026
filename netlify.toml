@@ -1,6 +1,5 @@
 [build]
-  # Añadimos 'mkdir -p dist &&' al principio para asegurar que la carpeta exista
-  command = "mkdir -p dist && npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css"
+  command = "npx @tailwindcss/cli -i src/input.css -o dist/output.css"
   publish = "."
 
 [build.environment]
