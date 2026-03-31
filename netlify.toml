@@ -1,0 +1,9 @@
+[build]
+  # Comando para compilar Tailwind 4
+  command = "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css"
+  # Directorio que Netlify servirá al público
+  publish = "."
+
+[build.environment]
+  # Forzamos una versión de Node moderna para evitar errores de compatibilidad
+  NODE_VERSION = "20"

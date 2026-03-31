@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+    /* Identidad de Marca */
+    --color-primary: #1360a4;
+    --color-body-text: #334155;
+    --color-neutral-light: #e5e5e5;
+    --color-bg-page: #f2f2f2;
+    --color-cta-orange: #ff6b00;
+    --color-whatsapp: #25d366;
+    --color-whatsapp-hover: #128c7e;
+
+    /* Reglas de Diseño */
+    --font-roboto: "Roboto", sans-serif;
+    --radius-max: 24px;
+}
+
+@layer base {
+    body {
+        @apply font-roboto bg-[--color-bg-page] text-[--color-body-text] antialiased;
+        /* Mobile First: 18px */
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    /* Desktop: 20px */
+    @media (min-width: 1024px) {
+        body {
+            font-size: 20px;
+        }
+    }
+
+    /* Jerarquía Visual Pixel Perfect */
+    h1 {
+        @apply text-primary font-bold leading-tight text-4xl md:text-6xl;
+    }
+    h2 {
+        @apply text-primary font-semibold text-3xl md:text-4xl mb-8;
+    }
+    h3 {
+        @apply font-semibold text-2xl mb-4;
+    }
+
+    a,
+    button {
+        @apply transition-all duration-300 ease-in-out;
+    }
+}
+
+/* Componentes Personalizados */
+@layer components {
+    .btn-cta {
+        @apply bg-[--color-cta-orange] text-white px-10 py-5 rounded-[--radius-max] 
+           text-[20px] font-semibold shadow-lg hover:scale-105 active:scale-95
+           flex items-center justify-center text-center;
+        /* Contraste: Blanco sobre Naranja vibrante cumple con legibilidad para 3ra edad en este tamaño */
+    }
+
+    .nav-link {
+        @apply hover:text-primary font-medium px-4 py-2;
+    }
+
+    .card-category {
+        @apply bg-white p-10 rounded-[--radius-max] border border-[--color-neutral-light] 
+           hover:shadow-xl hover:-translate-y-2 transition-all flex flex-col gap-4;
+    }
+}
