@@ -3,10 +3,13 @@
 @theme {
     /* Identidad de Marca */
     --color-primary: #1360a4;
+    --color-primary-light: #258ce6;
+    --color-off-black: #181818;
     --color-body-text: #334155;
     --color-neutral-light: #e5e5e5;
     --color-bg-page: #f2f2f2;
     --color-cta-orange: #ff6b00;
+    --color-cta-orange-hover: #be4e00;
     --color-whatsapp: #25d366;
     --color-whatsapp-hover: #128c7e;
 
@@ -16,21 +19,23 @@
 }
 
 @layer base {
+    html {
+        scroll-padding-top: 140px;
+        scroll-behavior: smooth;
+    }
+
     body {
         @apply font-roboto bg-[--color-bg-page] text-[--color-body-text] antialiased;
-        /* Mobile First: 18px */
         font-size: 18px;
         line-height: 1.6;
     }
 
-    /* Desktop: 20px */
     @media (min-width: 1024px) {
         body {
             font-size: 20px;
         }
     }
 
-    /* Jerarquía Visual Pixel Perfect */
     h1 {
         @apply text-primary font-bold leading-tight text-4xl md:text-6xl;
     }
@@ -45,23 +50,61 @@
     button {
         @apply transition-all duration-300 ease-in-out;
     }
-}
 
-/* Componentes Personalizados */
-@layer components {
-    .btn-cta {
-        @apply bg-[--color-cta-orange] text-white px-10 py-5 rounded-[--radius-max] 
-           text-[20px] font-semibold shadow-lg hover:scale-105 active:scale-95
-           flex items-center justify-center text-center;
-        /* Contraste: Blanco sobre Naranja vibrante cumple con legibilidad para 3ra edad en este tamaño */
-    }
+    @layer components {
+        .carrusel-contenedor {
+            @apply flex gap-6 overflow-x-auto pb-10 scroll-smooth w-full;
+            @media (min-width: 1024px) {
+                @apply grid grid-cols-5 overflow-visible gap-4 pb-0;
+            }
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            scroll-snap-type: x mandatory;
+        }
 
-    .nav-link {
-        @apply hover:text-primary font-medium px-4 py-2;
-    }
+        .card-solucion {
+            @apply relative rounded-3xl overflow-hidden flex flex-col transition-all duration-500 border border-neutral-200 bg-white shadow-md;
+            height: full;
+            scroll-snap-align: start;
+            @apply min-w-70;
+            @media (min-width: 1024px) {
+                @apply min-w-0 w-full;
+            }
+        }
 
-    .card-category {
-        @apply bg-white p-10 rounded-[--radius-max] border border-[--color-neutral-light] 
-           hover:shadow-xl hover:-translate-y-2 transition-all flex flex-col gap-4;
+        /* Contenedor de imagen con degradado integrado */
+        .card-solucion .img-container {
+            @apply relative w-full h-48 overflow-hidden;
+        }
+
+        .card-solucion .bg-img {
+            @apply w-full h-full object-cover transition-transform duration-700;
+        }
+
+        .card-solucion .content {
+            @apply relative z-20 flex flex-col p-12;
+        }
+
+        /* Quitamos márgenes de los h3 y p dentro de las cards */
+        .card-solucion .content h3 {
+            @apply text-lg font-bold text-primary leading-tight mt-2;
+            margin-bottom: 0 !important;
+        }
+
+        .card-solucion .content p {
+            @apply text-sm leading-snug mt-1;
+            margin-top: 4px !important;
+        }
+
+        .card-solucion:hover .bg-img {
+            @apply scale-110;
+        }
+
+        .card-solucion:hover {
+            @apply -translate-y-2 shadow-xl;
+        }
     }
 }

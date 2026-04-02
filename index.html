@@ -8,124 +8,183 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="./src/input.css" rel="stylesheet">
 </head>
 
 <body class="pt-20">
 
-    <nav class="fixed top-0 left-0 w-full h-20 bg-white/95 backdrop-blur-sm z-50 border-b border-[--color-neutral-light]">
+    <nav class="fixed top-0 left-0 w-full lg:h-32 h-24 bg-white/95 backdrop-blur-sm z-50 border-b border-neutral-300">
         <div class="container mx-auto h-full px-6 md:px-12 flex justify-between items-center">
-            <img src="assets/logo.png" alt="Agromega" class="h-10 md:h-12 object-contain">
+            <img src="assets/logo-agromega-2025.svg" alt="Agromega" class="h-8 md:h-10 object-contain">
             <div class="flex items-center gap-12">
                 <div class="hidden lg:flex items-center gap-8">
-                    <a href="#inicio" class="hover:text-primary transition-colors">Inicio</a>
-                    <a href="#nosotros" class="hover:text-primary transition-colors">Nosotros</a>
-                    <a href="#categorias" class="hover:text-primary transition-colors">Categorías</a>
-                    <a href="#contacto" class="hover:text-primary transition-colors">Contacto</a>
+                    <a href="#inicio" data-i18n="nav-inicio" class="text-body-text font-medium hover:text-primary duration-200">Inicio</a>
+                    <a href="#nosotros" data-i18n="nav-nosotros" class="text-body-text font-medium hover:text-primary duration-200">Nosotros</a>
+                    <a href="#categorias" data-i18n="nav-soluciones" class="text-body-text font-medium hover:text-primary duration-200">Categorías</a>
+                    <a href="#contacto" data-i18n="nav-contacto" class="text-body-text font-medium hover:text-primary duration-200">Contacto</a>
                 </div>
                 <div class="flex gap-3 text-sm font-bold border-l border-[--color-neutral-light] pl-6">
-                    <button class="text-primary underline decoration-2 underline-offset-4">ES</button>
-                    <button class="text-gray-400 hover:text-primary">EN</button>
+                    <p>Leng:</p>
+                    <button id="btn-es" class="lang-btn text-primary underline decoration-2 underline-offset-4">ES</button>
+                    <button id="btn-en" class="lang-btn text-gray-400 hover:text-primary">EN</button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section id="inicio" class="py-16 md:py-24 px-6 md:px-12">
-        <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8">
-                <h1 class="text-primary">Tu aliado estratégico en el campo mexicano</h1>
-                <p class="max-w-xl">Especialistas en nutrición vegetal y tecnología de aplicación. Distribuidores autorizados de <strong>Guarany</strong>.</p>
-                <a href="mailto:contacto@agromega.com" class="btn-cta inline-block">Hablemos</a>
-            </div>
-            <div class="rounded-[24px] overflow-hidden shadow-2xl">
-                <img src="assets/hero.jpg" alt="Agromega en acción" class="w-full h-full object-cover aspect-video">
+    <section id="inicio" class="relative w-full h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1624791338465-2c1af1eb117d?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover brightness-75" alt="Campo agrícola">
+        </div>
+        <div class="container mx-auto px-6 md:px-12 relative z-10">
+            <div class="max-w-5xl space-y-8">
+                <h1 data-i18n="hero-titulo" class="text-white text-5xl md:text-8xl font-bold leading-tight uppercase tracking-tight">Innovando en el comercio agrícola</h1>
+                <p data-i18n="hero-p" class="text-white text-lg md:text-2xl max-w-3xl font-light leading-relaxed bg-off-black/75 px-6 py-4 rounded-xl">¿Buscas una solución integral a las necesidades de nutrición y protección de cultivo y mayor rentabilidad para tu negocio?</p>
+                <div class="pt-6">
+                    <a href="mailto:contacto@agromega.com" class="bg-primary-light hover:bg-primary text-white lg:px-24 px-14 py-4 lg:py-8 rounded-2xl text-lg lg:text-2xl font-semibold shadow-2xl transition w-fit uppercase duration-300 border-4 border-white flex items-center gap-4">
+                        <i class="fa-solid fa-envelope text-white text-3xl"></i> <span data-i18n="hero-cta">Contáctanos</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="nosotros" class="py-20 bg-white px-6 md:px-12">
         <div class="container mx-auto grid md:grid-cols-2 gap-12">
-            <div class="p-10 bg-[--color-bg-page] rounded-[24px] border border-[--color-neutral-light]">
-                <h2 class="text-2xl mb-4">Nuestra Misión</h2>
-                <p>Proveer soluciones innovadoras y sustentables para la nutrición y protección de cultivos, garantizando el crecimiento rentable del productor agrícola mediante asesoría especializada y tecnología de vanguardia.</p>
+            <div class="p-10 bg-zinc-100 rounded-[24px] hover:shadow-lg transition-all flex flex-col gap-6">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl border-4 border-primary-light">
+                    <i class="fa-solid fa-seedling text-3xl"></i>
+                </div>
+                <div>
+                    <h2 data-i18n="mision-titulo" class="text-2xl font-bold text-primary mb-4">Nuestra Misión</h2>
+                    <p data-i18n="mision-p" class="text-body-text leading-relaxed">Proveer soluciones innovadoras y sustentables para la nutrición y protección de cultivos, garantizando el crecimiento rentable del productor agrícola mediante asesoría especializada y tecnología de vanguardia.</p>
+                </div>
             </div>
-            <div class="p-10 bg-[--color-bg-page] rounded-[24px] border border-[--color-neutral-light]">
-                <h2 class="text-2xl mb-4">Nuestra Visión</h2>
-                <p>Ser el referente nacional en el comercio agrícola, reconocidos por la excelencia de nuestras marcas y el impacto positivo de nuestras soluciones tecnológicas en la soberanía alimentaria.</p>
+            <div class="p-10 bg-zinc-100 rounded-[24px] hover:shadow-lg transition-all flex flex-col gap-6">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white text-2xl border-4 border-primary-light">
+                    <i class="fa-solid fa-star text-3xl"></i>
+                </div>
+                <div>
+                    <h2 data-i18n="vision-titulo" class="text-2xl font-bold text-primary mb-4">Nuestra Visión</h2>
+                    <p data-i18n="vision-p" class="text-body-text leading-relaxed">Ser el referente nacional en el comercio agrícola, reconocidos por la excelencia de nuestras marcas y el impacto positivo de nuestras soluciones tecnológicas en la soberanía alimentaria.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="categorias" class="py-20 px-6 md:px-12">
+    <section id="categorias" class="py-20 px-6 md:px-12 bg-white">
         <div class="container mx-auto">
-            <h2 class="text-center mb-16">Nuestras Soluciones</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card-category">
-                    <h3 class="text-primary">Pulverizadores Guarany</h3>
-                    <p>Tecnología brasileña líder en precisión para la aplicación de fitosanitarios y fertilizantes.</p>
+            <h2 data-i18n="soluciones-titulo" class="text-center mb-16 text-4xl font-bold text-primary">Nuestras Soluciones</h2>
+            <div class="carrusel-contenedor">
+                <div class="card-solucion group">
+                    <div class="img-container">
+                        <img src="./assets/guarany-800-600.png" class="bg-img" alt="Pulverizadores">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="content p-6 mt-6">
+                        <i class="fa-solid fa-spray-can text-primary text-3xl pb-2"></i>
+                        <h3 data-i18n="cat1-t">Pulverizadores Guarany</h3>
+                        <p data-i18n="cat1-p" class="text-base pt-2 text-neutral-700">Tecnología brasileña líder en precisión para la aplicación de fitosanitarios y fertilizantes.</p>
+                    </div>
                 </div>
-                <div class="card-category">
-                    <h3>Fertilizantes</h3>
-                    <p>Nutrición vegetal avanzada diseñada para maximizar el rendimiento de cada hectárea.</p>
+                <div class="card-solucion group">
+                    <div class="img-container">
+                        <img src="./assets/fertilizantes-800-600.png" class="bg-img" alt="Fertilizantes">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="content p-6 mt-6">
+                        <i class="fa-solid fa-flask-vial text-primary text-3xl pb-2"></i>
+                        <h3 data-i18n="cat2-t" class="pb-2">Fertilizantes</h3>
+                        <p data-i18n="cat2-p" class="text-base pt-2 text-neutral-700">Nutrición vegetal avanzada diseñada para maximizar el rendimiento de cada hectárea.</p>
+                    </div>
                 </div>
-                <div class="card-category">
-                    <h3>Mezclas Físicas</h3>
-                    <p>Fórmulas personalizadas de fertilización adaptadas a las necesidades específicas de tu suelo.</p>
+                <div class="card-solucion group">
+                    <div class="img-container">
+                        <img src="./assets/mezclas-fisicas-800-600.png" class="bg-img" alt="Mezclas">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="content p-6 mt-6">
+                        <i class="fa-solid fa-mortar-pestle text-primary text-3xl pb-2"></i>
+                        <h3 data-i18n="cat3-t" class="pb-2">Mezclas Físicas</h3>
+                        <p data-i18n="cat3-p" class="text-base pt-2 text-neutral-700">Fórmulas personalizadas de fertilización adaptadas a las necesidades de tu suelo.</p>
+                    </div>
                 </div>
-                <div class="card-category">
-                    <h3>Semillas</h3>
-                    <p>Variedades de alto potencial genético para asegurar una cosecha uniforme y vigorosa.</p>
+                <div class="card-solucion group">
+                    <div class="img-container">
+                        <img src="./assets/semillas-800-600.png" class="bg-img" alt="Semillas">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="content p-6 mt-6">
+                        <i class="fa-solid fa-seedling text-primary text-3xl pb-2"></i>
+                        <h3 data-i18n="cat4-t" class="pb-2">Semillas</h3>
+                        <p data-i18n="cat4-p" class="text-base pt-2 text-neutral-700">Variedades de alto potencial genético para asegurar una cosecha uniforme.</p>
+                    </div>
                 </div>
-                <div class="card-category flex-grow lg:col-span-2">
-                    <h3>Protección de Cultivo</h3>
-                    <p>Amplia gama de soluciones para el control efectivo de plagas, malezas y enfermedades que protegen tu inversión.</p>
+                <div class="card-solucion group">
+                    <div class="img-container">
+                        <img src="./assets/proteccion-800-600.png" class="bg-img" alt="Protección">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="content p-6 mt-6">
+                        <i class="fa-solid fa-shield-halved text-primary text-3xl pb-2"></i>
+                        <h3 data-i18n="cat5-t" class="pb-2">Protección de Cultivo</h3>
+                        <p data-i18n="cat5-p" class="text-base pt-2 text-neutral-700">Amplia gama de soluciones para el control efectivo de plagas y enfermedades.</p>
+                    </div>
                 </div>
+            </div>
+            <p class="text-sm my-4 flex flex-row justify-center text-zinc-500 items-center lg:hidden">
+                <i class="fa-solid fa-chevron-left pr-4"></i> Desliza para ver más <i class="fa-solid fa-chevron-right pl-4"></i>
+            </p>
+        </div>
+    </section>
+
+    <section class="py-12 px-6 md:px-12">
+        <div class="container mx-auto text-center overflow-x-hidden">
+            <p data-i18n="marcas-aviso" class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-8">Marcas que manejamos</p>
+            <div class="flex flex-col md:flex-row w-full content-center justify-center gap-12">
+                <img src="./assets/logos-web/guarany.svg" class="h-32" alt="guarany">
+                <img src="./assets/logos-web/algamil.svg" class="h-32" alt="algamil">
+                <img src="./assets/logos-web/beltanol.svg" class="h-32" alt="beltanol">
+                <img src="./assets/logos-web/pene-treat.svg" class="h-32" alt="pene-treat">
+                <img src="./assets/logos-web/phyleaf.svg" class="h-32" alt="phyleaf">
+                <img src="./assets/logos-web/probelte.svg" class="h-32" alt="probelte">
+                <img src="./assets/logos-web/stemicol.svg" class="h-32" alt="stemicol">
             </div>
         </div>
     </section>
 
-    <section class="py-12 border-t border-[--color-neutral-light] px-6 md:px-12">
-        <div class="container mx-auto text-center">
-            <p class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-8">Marcas que manejamos</p>
-            <div class="flex flex-wrap justify-center items-center gap-12 opacity-60">
-                <span class="font-bold text-2xl">GUARANY</span>
-                <span class="font-bold text-2xl">MARCA 2</span>
-                <span class="font-bold text-2xl">MARCA 3</span>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contacto" class="bg-white py-16 border-t border-[--color-neutral-light] px-6 md:px-12">
+    <footer id="contacto" class="bg-neutral-100 py-16 border-t border-neutral-200 px-6 md:px-12">
         <div class="container mx-auto grid md:grid-cols-3 gap-16">
-            <div>
-                <img src="assets/logo.png" alt="Agromega" class="h-8 mb-8">
-                <p class="text-base">Guadalajara, Jalisco, México.</p>
+            <div class="flex flex-col flex-start items-start">
+                <img src="assets/logo-agromega-2025.svg" alt="Agromega" class="h-8 mb-8">
+                <p class="text-base flex items-center gap-3">
+                <ul>
+
+                    <li><span class="text-neutral-700 text-lg">Jocotepec, Jalisco, Mx.</span></li>
+                    <li><span class="text-neutral-700 text-lg"><i class="fa-solid fa-location-dot text-primary"></i> Guadalajara - Morelia 46</span></li>
+                    <li><span class="text-neutral-700 text-lg"><i class="fa-solid fa-phone-flip text-primary"></i> Tel. 01 (33) 3798 1526</span></li>
+                    <li><span class="text-neutral-700 text-lg"><i class="fa-solid fa-phone-flip text-primary"></i> Tel. / Fax 01 (33) 3798 0637</span></li>
+                </ul>
+                </p>
             </div>
             <div>
-                <h3 class="text-lg mb-6">Mapa del Sitio</h3>
+                <h3 data-i18n="footer-mapa-t" class="text-lg mb-6 font-bold flex items-center gap-3 text-off-black"><i class="fa-solid fa-sitemap text-primary"></i> Mapa del Sitio</h3>
                 <ul class="space-y-4 text-base">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#categorias">Soluciones</a></li>
+                    <li><a href="#inicio" data-i18n="nav-inicio" class="hover:text-primary transition-colors">Inicio</a></li>
+                    <li><a href="#nosotros" data-i18n="nav-nosotros" class="hover:text-primary transition-colors">Nosotros</a></li>
+                    <li><a href="#categorias" data-i18n="nav-soluciones" class="hover:text-primary transition-colors">Soluciones</a></li>
                 </ul>
             </div>
             <div>
-                <h3 class="text-lg mb-6">Contacto Directo</h3>
-                <a href="mailto:contacto@agromega.com" class="text-primary font-bold">contacto@agromega.com</a>
-                <p class="mt-4">¿Tienes alguna duda? Envíanos un mensaje y un asesor te atenderá a la brevedad.</p>
+                <h3 data-i18n="footer-contacto-t" class="text-lg mb-6 font-bold flex items-center gap-3"><i class="fa-solid fa-headset text-off-black"></i> Contacto Directo</h3>
+                <a href="mailto:contacto@agromega.com" class="text-primary font-bold flex items-center gap-3 hover:bg-neutral-200 px-4 rounded-full"><i class="fa-solid fa-envelope"></i> contacto@agromega.com</a>
+                <p data-i18n="footer-p" class="mt-4 text-body-text">¿Tienes alguna duda? Envíanos un mensaje y un asesor te atenderá a la brevedad.</p>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/TUNUMERO" target="_blank" class="fixed bottom-8 right-8 w-16 h-16 bg-[--color-whatsapp] hover:bg-[--color-whatsapp-hover] text-white rounded-full flex items-center justify-center shadow-2xl z-[60] transition-transform hover:scale-110">
-        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.499-5.688-1.447l-6.305 1.65zm6.59-3.807c1.476.873 3.198 1.334 4.961 1.335 5.229 0 9.482-4.254 9.485-9.485.002-2.535-.985-4.917-2.777-6.71s-4.18-2.779-6.715-2.78c-5.23 0-9.482 4.255-9.485 9.488-.001 1.77.463 3.5 1.34 4.974l-.893 3.258 3.333-.873-.049-.03z" />
-        </svg>
-    </a>
-
-    <script src="./script.js"></script>
-</body>
+    <script type="module" src="./script.js"></script>
 </body>
 
 </html>
