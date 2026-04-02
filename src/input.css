@@ -106,5 +106,38 @@
         .card-solucion:hover {
             @apply -translate-y-2 shadow-xl;
         }
+
+        /* ... resto de tu CSS ... */
+
+        @layer utilities {
+            .animate-bounce-subtle {
+                animation: bounce-subtle 3s infinite;
+            }
+
+            @keyframes bounce-subtle {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+        }
+
+        /* Animación sutil para el mapa en el hover */
+        #diferenciadores img {
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #diferenciadores .group:hover img {
+            transform: scale(1.02) rotate(1deg);
+        }
+
+        /* Estilo para los títulos dentro de esta sección oscura */
+        #diferenciadores h2,
+        #diferenciadores h3 {
+            @apply text-white;
+        }
     }
 }
