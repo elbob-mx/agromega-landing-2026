@@ -28,6 +28,7 @@
     <nav class="fixed top-0 left-0 w-full lg:h-32 h-24 bg-white/95 backdrop-blur-sm z-50 border-b border-neutral-300">
         <div class="container mx-auto h-full px-6 md:px-12 flex justify-between items-center">
             <img src="assets/logo-agromega-2025.svg" alt="Agromega" class="h-8 md:h-10 object-contain">
+
             <div class="flex items-center gap-12">
                 <div class="hidden lg:flex items-center gap-8">
                     <a href="#inicio" data-i18n="nav-inicio" class="text-body-text font-medium hover:text-primary duration-200">Inicio</a>
@@ -35,10 +36,19 @@
                     <a href="#categorias" data-i18n="nav-soluciones" class="text-body-text font-medium hover:text-primary duration-200">Categorías</a>
                     <a href="#contacto" data-i18n="nav-contacto" class="text-body-text font-medium hover:text-primary duration-200">Contacto</a>
                 </div>
-                <div class="flex gap-3 text-sm font-bold border-l border-[--color-neutral-light] pl-6">
-                    <p>Leng:</p>
-                    <button id="btn-es" class="lang-btn text-primary underline decoration-2 underline-offset-4">ES</button>
-                    <button id="btn-en" class="lang-btn text-gray-400 hover:text-primary">EN</button>
+
+                <!-- SEARCHBAR
+                <div class="relative flex items-center">
+                    <input type="text" id="main-search" placeholder="Buscar..." class="w-0 opacity-0 pointer-events-none transition-all duration-300 ease-in-out bg-zinc-100 rounded-full px-0 py-1 text-sm focus:outline-none border border-transparent">
+                    <button id="search-trigger" class="ml-2 text-primary hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-magnifying-glass text-xl"></i>
+                    </button>
+                </div> -->
+
+                <div class="flex gap-3 text-sm font-bold border-l border-neutral-200 pl-6 items-center">
+                    <p class="text-xs text-gray-400 uppercase hidden md:block">Lang:</p>
+                    <button id="btn-es" class="lang-btn hover:text-primary transition-colors">ES</button>
+                    <button id="btn-en" class="lang-btn hover:text-primary transition-colors">EN</button>
                 </div>
             </div>
         </div>
@@ -52,8 +62,8 @@
             <div class="max-w-5xl space-y-8">
                 <h1 data-i18n="hero-titulo" class="text-white text-5xl md:text-8xl font-bold leading-tight uppercase tracking-tight">Innovando en el comercio agrícola</h1>
                 <p data-i18n="hero-p" class="text-white text-lg md:text-2xl max-w-3xl font-light leading-relaxed bg-off-black/75 px-6 py-4 rounded-xl">¿Buscas una solución integral a las necesidades de nutrición y protección de cultivo y mayor rentabilidad para tu negocio?</p>
-                <div class="pt-6">
-                    <a href="mailto:contacto@agromega.com" class="bg-primary-light hover:bg-primary text-white lg:px-24 px-14 py-4 lg:py-8 rounded-2xl text-lg lg:text-2xl font-semibold shadow-2xl transition w-fit uppercase duration-300 border-4 border-white flex items-center gap-4">
+                <div class="pt-0 md:pt-6">
+                    <a href="mailto:contacto@agromega.com" class="bg-primary-light hover:bg-primary text-white lg:px-24 px-14 py-4 lg:py-8 rounded-2xl text-lg lg:text-2xl font-semibold shadow-2xl transition md:w-fit uppercase duration-300 border-4 border-white flex items-center gap-4 w-full justify-center">
                         <i class="fa-solid fa-envelope text-white text-3xl"></i> <span data-i18n="hero-cta">Contáctanos</span>
                     </a>
                 </div>
@@ -129,9 +139,9 @@
         </div>
     </section>
 
-    <section id="categorias" class="py-20 px-6 md:px-12 bg-white">
+    <section id="categorias" class="py-32 px-6 md:px-12 bg-white">
         <div class="container mx-auto">
-            <h2 data-i18n="soluciones-titulo" class="text-center mb-16 text-4xl font-bold text-primary">Nuestras Soluciones</h2>
+            <h2 data-i18n="soluciones-titulo" class="text-center mb-12 text-4xl font-bold text-primary">Nuestras Soluciones</h2>
             <div class="carrusel-contenedor">
                 <div class="card-solucion group">
                     <div class="img-container">
@@ -195,10 +205,47 @@
         </div>
     </section>
 
-    <section class="py-12 px-6 md:px-12">
+    <section id="proceso" class="py-32 bg-primary text-white px-6 md:px-12 border-t border-white/10">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-white font-bold text-4xl mb-4">¿Cómo trabajamos?</h2>
+                <p class="text-white/80 max-w-2xl mx-auto">Nuestro compromiso va más allá de la venta; te acompañamos en cada etapa para asegurar el éxito de tu cosecha.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12 relative">
+                <div class="hidden md:block absolute top-10 left-0 w-full h-0.5 bg-white/20 z-0"></div>
+
+                <div class="relative z-10 flex flex-col items-center text-center group">
+                    <div class="w-20 h-20 bg-white border-4 border-primary-light rounded-full flex items-center justify-center mb-6 shadow-2xl group-hover:bg-primary-light group-hover:border-white transition-all duration-500">
+                        <i class="fa-solid fa-clipboard-check text-3xl text-primary group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">1. Diagnóstico</h3>
+                    <p class="text-sm text-white/70 leading-relaxed">Analizamos las condiciones de tu suelo y cultivo para identificar necesidades específicas.</p>
+                </div>
+
+                <div class="relative z-10 flex flex-col items-center text-center group">
+                    <div class="w-20 h-20 bg-white border-4 border-primary-light rounded-full flex items-center justify-center mb-6 shadow-2xl group-hover:bg-primary-light group-hover:border-white transition-all duration-500">
+                        <i class="fa-solid fa-vial-circle-check text-3xl text-primary group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">2. Recomendación</h3>
+                    <p class="text-sm text-white/70 leading-relaxed">Diseñamos una solución integral con los mejores productos y tecnología de aplicación.</p>
+                </div>
+
+                <div class="relative z-10 flex flex-col items-center text-center group">
+                    <div class="w-20 h-20 bg-white border-4 border-primary-light rounded-full flex items-center justify-center mb-6 shadow-2xl group-hover:bg-primary-light group-hover:border-white transition-all duration-500">
+                        <i class="fa-solid fa-chart-line text-3xl text-primary group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">3. Seguimiento</h3>
+                    <p class="text-sm text-white/70 leading-relaxed">Acompañamos el proceso para garantizar la rentabilidad y salud de tu negocio agrícola.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lg:py-32 py-12 px-6 md:px-12">
         <div class="container mx-auto text-center overflow-x-hidden">
             <p data-i18n="marcas-aviso" class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-8">Marcas que manejamos</p>
-            <div class="flex flex-col md:flex-row w-full content-center justify-center gap-12">
+            <div class="lg:flex grid grid-cols-3 md:flex-row w-full lg:justify-center justify-items-stretch lg:gap-12 gap-6">
                 <img src="./assets/logos-web/guarany.svg" class="h-32" alt="guarany">
                 <img src="./assets/logos-web/algamil.svg" class="h-32" alt="algamil">
                 <img src="./assets/logos-web/beltanol.svg" class="h-32" alt="beltanol">
@@ -216,9 +263,10 @@
                 <img src="assets/logo-agromega-2025.svg" alt="Agromega" class="h-8 mb-8">
                 <p class="text-base flex items-center gap-3">
                 <ul>
-
-                    <li><span class="text-neutral-700 text-lg">Jocotepec, Jalisco, Mx.</span></li>
-                    <li><span class="text-neutral-700 text-lg"><i class="fa-solid fa-location-dot text-primary"></i> Guadalajara - Morelia 46</span></li>
+                    <a href="https://maps.app.goo.gl/mNua1kG8faKExjzf9" target="_blank" rel="noopener noreferrer">
+                        <li><span class="text-neutral-700 text-lg">Jocotepec, Jalisco, Mx.</span></li>
+                        <li><span class="text-neutral-700 text-lg"><i class="fa-solid fa-location-dot text-primary"></i> Guadalajara - Morelia 46</span></li>
+                    </a>
                     <li><span class="text-neutral-700 text-lg"><i class="fa-solid fa-phone-flip text-primary"></i> Tel. 01 (33) 3798 1526</span></li>
                     <li><span class="text-neutral-700 text-lg"><i class="fa-solid fa-phone-flip text-primary"></i> Tel. / Fax 01 (33) 3798 0637</span></li>
                 </ul>
@@ -233,7 +281,7 @@
                 </ul>
             </div>
             <div>
-                <h3 data-i18n="footer-contacto-t" class="text-lg mb-6 font-bold flex items-center gap-3"><i class="fa-solid fa-headset text-off-black"></i> Contacto Directo</h3>
+                <h3 data-i18n="footer-contacto-t" class="text-lg mb-6 font-bold flex items-center gap-3">Contacto Directo</h3>
                 <a href="mailto:contacto@agromega.com" class="text-primary font-bold flex items-center gap-3 hover:text-primary-light rounded-full"><i class="fa-solid fa-envelope"></i> contacto@agromega.com</a>
                 <p data-i18n="footer-p" class="mt-4 text-body-text">¿Tienes alguna duda? Envíanos un mensaje y un asesor te atenderá a la brevedad.</p>
             </div>
