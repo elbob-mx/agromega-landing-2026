@@ -33,17 +33,10 @@
                 <div class="hidden lg:flex items-center gap-8">
                     <a href="#inicio" data-i18n="nav-inicio" class="text-body-text font-medium hover:text-primary duration-200">Inicio</a>
                     <a href="#nosotros" data-i18n="nav-nosotros" class="text-body-text font-medium hover:text-primary duration-200">Nosotros</a>
-                    <a href="#categorias" data-i18n="nav-soluciones" class="text-body-text font-medium hover:text-primary duration-200">Categorías</a>
+                    <a href="#categorias" data-i18n="nav-soluciones" class="text-body-text font-medium hover:text-primary duration-200">Soluciones</a>
+                    <a href="#proceso" data-i18n="nav-proceso" class="text-body-text font-medium hover:text-primary duration-200">Proceso</a>
                     <a href="#contacto" data-i18n="nav-contacto" class="text-body-text font-medium hover:text-primary duration-200">Contacto</a>
                 </div>
-
-                <!-- SEARCHBAR
-                <div class="relative flex items-center">
-                    <input type="text" id="main-search" placeholder="Buscar..." class="w-0 opacity-0 pointer-events-none transition-all duration-300 ease-in-out bg-zinc-100 rounded-full px-0 py-1 text-sm focus:outline-none border border-transparent">
-                    <button id="search-trigger" class="ml-2 text-primary hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-magnifying-glass text-xl"></i>
-                    </button>
-                </div> -->
 
                 <div class="flex gap-3 text-sm font-bold border-l border-neutral-200 pl-6 items-center">
                     <p class="text-xs text-gray-400 uppercase hidden md:block">Lang:</p>
@@ -97,29 +90,24 @@
     <section id="diferenciadores" class="py-20 bg-primary text-white overflow-hidden">
         <div class="container mx-auto px-6 md:px-12">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
-
                 <div class="space-y-8">
-                    <div class="inline-block px-4 py-1 rounded-full bg-primary-light/30 border border-white text-white text-sm font-bold tracking-widest uppercase">
-                        18 Años de Trayectoria
-                    </div>
+                    <div data-i18n="historia-tag" class="inline-block px-4 py-1 rounded-full bg-primary-light/30 border border-white text-white text-sm font-bold tracking-widest uppercase">18 Años de Trayectoria</div>
                     <h2 class="text-white mb-0 text-4xl md:text-5xl font-bold leading-tight">
-                        Más que productos, <br> <span class="text-white">generamos confianza.</span>
+                        <span data-i18n="historia-t">Más que productos, generamos confianza.</span>
                     </h2>
-                    <p class="text-lg text-white/80 leading-relaxed mt-4">
-                        Nuestra historia inició hace 18 años como una pequeña comercializadora. Hoy, brindamos soluciones integrales en fertilizantes, riego y equipos, con una cultura de trabajo enfocada en relaciones de confianza a largo plazo.
-                    </p>
+                    <p data-i18n="historia-p" class="text-lg text-white/80 leading-relaxed mt-4">Nuestra historia inició hace 18 años como una pequeña comercializadora. Hoy, brindamos soluciones integrales en fertilizantes, riego y equipos, con una cultura de trabajo enfocada en relaciones de confianza a largo plazo.</p>
 
                     <div class="grid grid-cols-2 gap-6 pt-4">
                         <div class="border-l-4 border-primary-light pl-4">
-                            <span class="text-3xl font-bold block">+18 Años</span>
-                            <span class="text-sm text-white/60 uppercase tracking-tighter">De Experiencia</span>
+                            <span data-i18n="historia-exp" class="text-3xl font-bold block">+18 Años</span>
+                            <span data-i18n="historia-exp-p" class="text-sm text-white/60 uppercase tracking-tighter">De Experiencia</span>
                         </div>
                         <div class="border-l-4 border-primary-light pl-4">
-                            <span class="text-3xl font-bold block">Integrales</span>
+                            <span data-i18n="historia-int" class="text-3xl font-bold block">Integrales</span>
                             <span class="text-sm text-white/60 uppercase tracking-tighter">
                                 <ul class="mt-2">
-                                    <li>+500 Productores</li>
-                                    <li>+20 Marcas</li>
+                                    <li data-i18n="historia-prod">+500 Productores</li>
+                                    <li data-i18n="historia-marcas">+20 Marcas</li>
                                 </ul>
                             </span>
                         </div>
@@ -129,17 +117,16 @@
                 <div class="relative group">
                     <div class="absolute -inset-4 bg-primary-light/10 rounded-full blur-3xl group-hover:bg-primary-light/20 transition duration-1000"></div>
                     <div class="relative bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-[40px] shadow-2xl">
-                        <h3 class="text-center text-xl font-bold mb-6 text-white uppercase tracking-widest">Presencia Estratégica</h3>
-                        <img src="./assets/cobertura.svg" alt="Mapa de cobertura Agromega" class="w-full h-auto drop-shadow-[0_20px_50px_rgba(37,140,230,0.3)]">
-                        <p class="mt-6 text-center text-sm text-white/50">Atención especializada en los principales estados agrícolas del país.</p>
+                        <h3 data-i18n="historia-mapa-t" class="text-center text-xl font-bold mb-6 text-white uppercase tracking-widest">Presencia Estratégica</h3>
+                        <img src="./assets/cobertura.svg" alt="Mapa de cobertura Agromega" class="w-full h-auto drop-shadow-[0_20px_50_rgba(37,140,230,0.3)]">
+                        <p data-i18n="historia-mapa-p" class="mt-6 text-center text-sm text-white/50">Atención especializada en los principales estados agrícolas del país.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section id="categorias" class="py-32 px-6 md:px-12 bg-white">
+    <section id="categorias" class="pt-24 pb-12 px-6 md:px-12 bg-white">
         <div class="container mx-auto">
             <h2 data-i18n="soluciones-titulo" class="text-center mb-12 text-4xl font-bold text-primary">Nuestras Soluciones</h2>
             <div class="carrusel-contenedor">
@@ -173,7 +160,7 @@
                     <div class="content p-6 mt-6">
                         <i class="fa-solid fa-mortar-pestle text-primary text-3xl pb-2"></i>
                         <h3 data-i18n="cat3-t" class="pb-2">Mezclas Físicas</h3>
-                        <p data-i18n="cat3-p" class="text-base pt-2 text-neutral-700">Fórmulas personalizadas de fertilización adaptadas a las necesidades de tu suelo.</p>
+                        <p data-i18n="cat3-p" class="text-base pt-2 text-neutral-700">Fórmulas personalizadas de fertilización adaptadas a las necesidades específicas de tu suelo.</p>
                     </div>
                 </div>
                 <div class="card-solucion group">
@@ -184,7 +171,7 @@
                     <div class="content p-6 mt-6">
                         <i class="fa-solid fa-seedling text-primary text-3xl pb-2"></i>
                         <h3 data-i18n="cat4-t" class="pb-2">Semillas</h3>
-                        <p data-i18n="cat4-p" class="text-base pt-2 text-neutral-700">Variedades de alto potencial genético para asegurar una cosecha uniforme.</p>
+                        <p data-i18n="cat4-p" class="text-base pt-2 text-neutral-700">Variedades de alto potencial genético para asegurar una cosecha uniforme y vigorosa.</p>
                     </div>
                 </div>
                 <div class="card-solucion group">
@@ -195,7 +182,7 @@
                     <div class="content p-6 mt-6">
                         <i class="fa-solid fa-shield-halved text-primary text-3xl pb-2"></i>
                         <h3 data-i18n="cat5-t" class="pb-2">Protección de Cultivo</h3>
-                        <p data-i18n="cat5-p" class="text-base pt-2 text-neutral-700">Amplia gama de soluciones para el control efectivo de plagas y enfermedades.</p>
+                        <p data-i18n="cat5-p" class="text-base pt-2 text-neutral-700">Amplia gama de soluciones para el control efectivo de plagas, malezas y enfermedades que protegen tu inversión.</p>
                     </div>
                 </div>
             </div>
@@ -205,44 +192,7 @@
         </div>
     </section>
 
-    <section id="proceso" class="py-32 bg-primary text-white px-6 md:px-12 border-t border-white/10">
-        <div class="container mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-white font-bold text-4xl mb-4">¿Cómo trabajamos?</h2>
-                <p class="text-white/80 max-w-2xl mx-auto">Nuestro compromiso va más allá de la venta; te acompañamos en cada etapa para asegurar el éxito de tu cosecha.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-12 relative">
-                <div class="hidden md:block absolute top-10 left-0 w-full h-0.5 bg-white/20 z-0"></div>
-
-                <div class="relative z-10 flex flex-col items-center text-center group">
-                    <div class="w-20 h-20 bg-white border-4 border-primary-light rounded-full flex items-center justify-center mb-6 shadow-2xl group-hover:bg-primary-light group-hover:border-white transition-all duration-500">
-                        <i class="fa-solid fa-clipboard-check text-3xl text-primary group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">1. Diagnóstico</h3>
-                    <p class="text-sm text-white/70 leading-relaxed">Analizamos las condiciones de tu suelo y cultivo para identificar necesidades específicas.</p>
-                </div>
-
-                <div class="relative z-10 flex flex-col items-center text-center group">
-                    <div class="w-20 h-20 bg-white border-4 border-primary-light rounded-full flex items-center justify-center mb-6 shadow-2xl group-hover:bg-primary-light group-hover:border-white transition-all duration-500">
-                        <i class="fa-solid fa-vial-circle-check text-3xl text-primary group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">2. Recomendación</h3>
-                    <p class="text-sm text-white/70 leading-relaxed">Diseñamos una solución integral con los mejores productos y tecnología de aplicación.</p>
-                </div>
-
-                <div class="relative z-10 flex flex-col items-center text-center group">
-                    <div class="w-20 h-20 bg-white border-4 border-primary-light rounded-full flex items-center justify-center mb-6 shadow-2xl group-hover:bg-primary-light group-hover:border-white transition-all duration-500">
-                        <i class="fa-solid fa-chart-line text-3xl text-primary group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">3. Seguimiento</h3>
-                    <p class="text-sm text-white/70 leading-relaxed">Acompañamos el proceso para garantizar la rentabilidad y salud de tu negocio agrícola.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="lg:py-32 py-12 px-6 md:px-12">
+    <section class="lg:py-12 py-12 px-6 md:px-12">
         <div class="container mx-auto text-center overflow-x-hidden">
             <p data-i18n="marcas-aviso" class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-8">Marcas que manejamos</p>
             <div class="lg:flex grid grid-cols-3 md:flex-row w-full lg:justify-center justify-items-stretch lg:gap-12 gap-6">
@@ -257,23 +207,97 @@
         </div>
     </section>
 
+    <section id="proceso" class="py-32 bg-primary text-white px-6 md:px-12 border-t border-white/10">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 data-i18n="proc-t" class="text-white font-bold text-4xl mb-4">¿Cómo trabajamos?</h2>
+                <p data-i18n="proc-p" class="text-white/80 max-w-2xl mx-auto">Nuestro compromiso va más allá de la venta; te acompañamos en cada etapa para asegurar el éxito de tu cosecha.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12 relative">
+                <div class="hidden md:block absolute top-10 left-0 w-full h-0.5 bg-white/20 z-0"></div>
+
+                <div class="relative z-10 flex flex-col items-center text-center group">
+                    <div class="w-20 h-20 bg-white border-4 border-primary-light rounded-full flex items-center justify-center mb-6 shadow-2xl group-hover:bg-primary-light group-hover:border-white transition-all duration-500">
+                        <i class="fa-solid fa-clipboard-check text-3xl text-primary group-hover:text-white"></i>
+                    </div>
+                    <h3 data-i18n="proc-step1-t" class="text-xl font-bold text-white mb-3">1. Diagnóstico</h3>
+                    <p data-i18n="proc-step1-p" class="text-sm text-white/70 leading-relaxed">Analizamos las condiciones de tu suelo y cultivo para identificar necesidades específicas.</p>
+                </div>
+
+                <div class="relative z-10 flex flex-col items-center text-center group">
+                    <div class="w-20 h-20 bg-white border-4 border-primary-light rounded-full flex items-center justify-center mb-6 shadow-2xl group-hover:bg-primary-light group-hover:border-white transition-all duration-500">
+                        <i class="fa-solid fa-vial-circle-check text-3xl text-primary group-hover:text-white"></i>
+                    </div>
+                    <h3 data-i18n="proc-step2-t" class="text-xl font-bold text-white mb-3">2. Recomendación</h3>
+                    <p data-i18n="proc-step2-p" class="text-sm text-white/70 leading-relaxed">Diseñamos una solución integral con los mejores productos y tecnología de aplicación.</p>
+                </div>
+
+                <div class="relative z-10 flex flex-col items-center text-center group">
+                    <div class="w-20 h-20 bg-white border-4 border-primary-light rounded-full flex items-center justify-center mb-6 shadow-2xl group-hover:bg-primary-light group-hover:border-white transition-all duration-500">
+                        <i class="fa-solid fa-chart-line text-3xl text-primary group-hover:text-white"></i>
+                    </div>
+                    <h3 data-i18n="proc-step3-t" class="text-xl font-bold text-white mb-3">3. Seguimiento</h3>
+                    <p data-i18n="proc-step3-p" class="text-sm text-white/70 leading-relaxed">Acompañamos el proceso para garantizar la rentabilidad y salud de tu negocio agrícola.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-white text-center px-6 border-t border-neutral-100">
+        <div class="container mx-auto">
+            <div class="max-w-6xl mx-auto">
+                <h2 data-i18n="final-t" class="text-primary font-bold text-4xl md:text-5xl mb-6 leading-tight">
+                    ¿Listo para potenciar la rentabilidad de tu cultivo?
+                </h2>
+                <p data-i18n="final-p" class="text-body-text text-lg mb-12 max-w-3xl mx-auto">
+                    Únete a los productores que ya confían en el respaldo técnico y la innovación de <span class="font-bold text-primary">Agromega</span>.
+                </p>
+
+                <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                    <a href="#contacto" class="bg-primary text-white px-12 py-5 rounded-full font-bold text-xl hover:bg-primary-light hover:scale-105 transition-all duration-300 shadow-2xl">
+                        <i class="fa-solid fa-envelope text-white text-3xl flex flex-row align-middle"></i>  <span data-i18n="final-cta">Hablar con un experto</span>
+                    </a>
+
+                    <div class="flex items-center gap-4">
+                        <span class="h-px w-8 bg-neutral-300"></span>
+                        <span data-i18n="final-or" class="text-gray-400 font-medium uppercase text-xs tracking-widest">O también</span>
+                        <span class="h-px w-8 bg-neutral-300"></span>
+                    </div>
+
+                    <a href="https://wa.me/523300000000" target="_blank" class="flex items-center gap-3 text-primary font-bold text-lg hover:text-emerald-600 transition-all duration-500 hover:scale-110 p-2">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span data-i18n="final-wa">Chat Directo</span>
+                    </a>
+                </div>
+
+                <p class="mt-12 text-xs text-gray-700 uppercase tracking-widest font-medium">
+                    <i class="fa-solid fa-check-double text-primary mr-2 text-base"></i>
+                    <span data-i18n="final-note">Asesoría técnica especializada a un click de distancia.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
     <footer id="contacto" class="bg-neutral-100 py-16 border-t border-neutral-200 px-6 md:px-12">
         <div class="container mx-auto grid md:grid-cols-3 gap-16">
             <div class="flex flex-col flex-start items-start">
                 <img src="assets/logo-agromega-2025.svg" alt="Agromega" class="h-8 mb-8">
-                <p class="text-base flex items-center gap-3">
-                <ul>
-                    <a href="https://maps.app.goo.gl/mNua1kG8faKExjzf9" target="_blank" rel="noopener noreferrer">
-                        <li><span class="text-neutral-700 text-lg">Jocotepec, Jalisco, Mx.</span></li>
-                        <li><span class="text-neutral-700 text-lg"><i class="fa-solid fa-location-dot text-primary"></i> Guadalajara - Morelia 46</span></li>
-                    </a>
-                    <li><span class="text-neutral-700 text-lg"><i class="fa-solid fa-phone-flip text-primary"></i> Tel. 01 (33) 3798 1526</span></li>
-                    <li><span class="text-neutral-700 text-lg"><i class="fa-solid fa-phone-flip text-primary"></i> Tel. / Fax 01 (33) 3798 0637</span></li>
-                </ul>
-                </p>
+                <div class="text-neutral-700 text-lg">
+                    <ul>
+                        <a href="https://maps.app.goo.gl/mNua1kG8faKExjzf9" target="_blank" rel="noopener noreferrer">
+                            <li data-i18n="footer-loc">Jocotepec, Jalisco, Mx.</li>
+                            <li><i class="fa-solid fa-location-dot text-primary"></i> Guadalajara - Morelia 46</li>
+                        </a>
+                        <li><i class="fa-solid fa-phone-flip text-primary"></i> Tel. 01 (33) 3798 1526</li>
+                        <li><i class="fa-solid fa-phone-flip text-primary"></i> Tel. / Fax 01 (33) 3798 0637</li>
+                    </ul>
+                </div>
             </div>
             <div>
-                <h3 data-i18n="footer-mapa-t" class="text-lg mb-6 font-bold flex items-center gap-3 text-off-black"><i class="fa-solid fa-sitemap"></i> Mapa del Sitio</h3>
+                <h3 class="text-lg mb-6 font-bold flex items-center gap-3 text-off-black">
+                    <i class="fa-solid fa-sitemap"></i> <span data-i18n="footer-mapa-t">Mapa del Sitio</span>
+                </h3>
                 <ul class="space-y-4 text-base">
                     <li><a href="#inicio" data-i18n="nav-inicio" class="hover:text-primary transition-colors">Inicio</a></li>
                     <li><a href="#nosotros" data-i18n="nav-nosotros" class="hover:text-primary transition-colors">Nosotros</a></li>
@@ -289,20 +313,13 @@
     </footer>
 
     <a href="https://wa.me/523300000000" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 flex items-center group transition-all duration-300">
-
-        <span class="mr-3 bg-white text-primary font-bold py-2 px-4 rounded-full shadow-lg opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 hidden md:block">
-            ¿Necesitas asesoría?
-        </span>
-
+        <span data-i18n="wa-float" class="mr-3 bg-white text-primary font-bold py-2 px-4 rounded-full shadow-lg opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 hidden md:block">¿Necesitas asesoría?</span>
         <div class="w-16 h-16 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full flex items-center justify-center shadow-2xl transition-transform group-hover:scale-110 animate-bounce-subtle">
             <i class="fa-brands fa-whatsapp text-4xl"></i>
         </div>
     </a>
 
     <script type="module" src="./script.js"></script>
-</body>
-
-<script type="module" src="./script.js"></script>
 </body>
 
 </html>

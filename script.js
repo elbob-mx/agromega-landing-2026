@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         textsToTranslate.forEach((element) => {
             const key = element.getAttribute("data-i18n");
             if (translations[lang] && translations[lang][key]) {
-                element.textContent = translations[lang][key];
+                element.innerHTML = translations[lang][key];
             }
         });
 
@@ -45,6 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "proteccion", id: "#categorias" },
         { name: "nosotros", id: "#nosotros" },
         { name: "contacto", id: "#contacto" },
+        { name: "proceso", id: "#proceso" },
+        { name: "diagnostico", id: "#diagnostico" },
     ];
 
     // Mostrar/Ocultar barra de búsqueda
