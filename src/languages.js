@@ -70,6 +70,10 @@ export const translations = {
         "wa-float": "¿Necesitas asesoría?",
         "final-p":
             "Únete a los productores que ya confían en el respaldo técnico y la innovación de <span class='font-bold text-primary'>Agromega</span>.",
+        "infra-tag": "Capacidad Logística",
+        "infra-t": "Infraestructura de vanguardia para tu respaldo.",
+        "infra-p":
+            "Contamos con centros de distribución estratégicos y equipo especializado para garantizar que cada solución llegue a tu campo en el momento preciso.",
     },
     en: {
         "nav-inicio": "Home",
@@ -138,5 +142,9 @@ export const translations = {
         "wa-float": "Need assistance?",
         "final-p":
             "Join the producers who already trust in the technical support and innovation of <span class='font-bold text-primary'>Agromega</span>.",
+        "infra-tag": "Logistics Capacity",
+        "infra-t": "Cutting-edge infrastructure for your support.",
+        "infra-p":
+            "We have strategic distribution centers and specialized equipment to ensure that every solution reaches your field at the precise moment.",
     },
 };
