@@ -15,7 +15,7 @@ export const translations = {
         "vision-titulo": "Nuestra Visión",
         "vision-p":
             "Ser referente Nacional en el Comercio Agricola, reconocidos por la excelencia de nuestras marcas y el impacto positivo de nuestras soluciones tecnológicas en la soberanía alimentaria.",
-        "historia-tag": "18 Años de Trayectoria",
+        "historia-tag": "25 Años de Trayectoria",
         "historia-t": "Más que productos, generamos resultados rentables.",
         "historia-p":
             "Nuestra historia inició hace 25 años. Hoy brindamos soluciónes integrales, sumando experiencia y productos de calidad que generen valor agregado al agricultor con una cultura de trabajo sustentable de confiaza a largo plazo.",
@@ -87,7 +87,7 @@ export const translations = {
         "vision-titulo": "Our Vision",
         "vision-p":
             "To be the National benchmark in Agricultural Trade, recognized for the excellence of our brands and the positive impact of our technological solutions on food sovereignty.",
-        "historia-tag": "18 Years of History",
+        "historia-tag": "25 Years of History",
         "historia-t": "More than products, we generate profitable results.",
         "historia-p":
             "Our story began 25 years ago. Today we provide comprehensive solutions, adding experience and quality products that generate added value for the farmer with a sustainable long-term trust culture.",
